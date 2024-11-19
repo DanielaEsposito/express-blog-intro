@@ -41,7 +41,10 @@ app.get('/bacheca',(req, res)=> {
     img:"./public/img/torta_paesana.jpeg",
     tags : ["tradizione", "torta", "dolce"]
 }]
-
+res.json({
+    number : posts.length,
+    posts :posts
+})
 })
 
 app.listen(port ,()=>{
